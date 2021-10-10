@@ -1,0 +1,60 @@
+<!--menambahkan struktur dasar html-->
+<!DOCTYPE html> <!--deklarasikan DOCTYPE-->
+<html>
+    <!--menambahkan konten ke dalam tag <head>. seperti chracter encoding, title, memberikan shortcut-icon 
+        dan melakukan link ke css-->
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <link rel="shortcut icon" href="calculator-icon.png">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <!---menambahkan tag <div> dengan class "calculator"-->
+        <div class="calculator">
+            <!--menambahkan tag <input> dengan class "calculator-screen" dan tag <div> dengan class "calculator-keys"-->
+            <!--menambahkan atribut value dengan nilai 0 pada tag <input>-->
+            <!--menambahkan "disabled" pada tag <input> untuk melarang melakukan input angka dengan keyboard-->
+            <input type="text" class="calculator-screen" value="0" disabled/>
+            <div class="calculator-keys">
+                <!---menambahkan tag <div> dengan class "row" dan tiga tag <button> dengan masing-masing class
+                    "all-clear", "precentage", dan "operator" sebagai baris pertama dalam class row-->
+                <div class="row">
+                    <button class="all-clear">AC</button>
+                    <button class="percentage">%</button>
+                    <button class="operator" value="/">&divide;</button>
+                </div>
+                <!--menambahkan 4 tag <div> dengan class "row" dan pada 3 class "row" pertama masing-masing ditambahkan 
+                    4 tag <button> di dalamnya, dengan class "number" untuk value angka dan class "operator" 
+                    untuk value operasi hitung. pada class "row" ke-4 ditambahkan 3 tag <button> di dalamnya, dengan class
+                    "number zero-btn" dengan value 0, class "decimal" dengan value titik (.), serta "equal-sign" untuk sama dengan (=) 
+                -->
+                <div class="row">
+                    <button class="number" value="7">7</button>
+                    <button class="number" value="8">8</button>
+                    <button class="number" value="9">9</button>
+                    <button class="operator" value="*">&times;</button>
+                </div>
+                <div class="row">
+                    <button class="number" value="4">4</button>
+                    <button class="number" value="5">5</button>
+                    <button class="number" value="6">6</button>
+                    <button class="operator" value="-">-</button>
+                </div>
+                <div class="row">
+                    <button class="number" value="1">1</button>
+                    <button class="number" value="2">2</button>
+                    <button class="number" value="3">3</button>
+                    <button class="operator" value="+">+</button>
+                </div>
+                <div class="row">
+                    <button class="number zero-btn" value="0">0</button>
+                    <button class="decimal" value=".">.</button>
+                    <button class="equal-sign">=</button>
+                </div>
+            </div>
+        </div>
+        <!--tag <script> digunakan untuk menghubungkan html dengan javascript-->
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
